@@ -40,26 +40,47 @@ Include autenticazione JWT, creazione e gestione di conti fittizi, invio fondi, 
 
 ## Struttura del progetto
 jp-bank/
+
 ├── backend/
+
 │ ├── controllers/
+
 │ ├── models/
+
 │ ├── routes/
+
 │ ├── middlewares/
+
 │ ├── config/
+
 │ ├── server.js
+
 | └── swagger.js
+
 |
+
 ├── frontend/
+
 | ├── public/
+
 │ ├── src/
+
 │ | ├── views/
+
 │ | ├── components/
+
 │ | ├── store/
+
 │ | ├── router/
+
 │ | └── main.js
+
 | └── index.html
+
 |
+
 └── database/
+
   └── struttura.sql
 
 ---
