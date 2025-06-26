@@ -99,15 +99,20 @@ Il frontend sarà visibile all'indirizzo: http://localhost:5173
 Il progetto prevede l'utilizzo di un utente MySQL dedicato (es. bank_user) con accesso esclusivo al database jp_bank.
 Si consiglia di non utilizzare l'utente root per motivi di sicurezza.
 Di seguito la procedura per una corretta configurazione iniziale.
+
 Accedere a mysql come utente root:
 - mysql -u root -p
+  
 Creare un database:
 - CREATE DATABASE nome_database;
+  
 Creare l'utente dedicato all'utilizzo dell'applicazione:
 - CREATE USER 'nome_utente'@'localhost' IDENTIFIED BY 'password_sicura';
+  
 Assegnare i privilegi al nuovo utente:
 - GRANT ALL PRIVILEGES ON nome_database.* TO 'nome_utente'@'localhost';
 - FLUSH PRIVILEGES;
+  
 Uscire da mysql, spostarsi sulla cartella "database" del progetto ed importare il dump della struttura del db MySQL
 - mysql -u nome_utente -p nome_database < struttura.sql
 
