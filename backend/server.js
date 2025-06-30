@@ -17,7 +17,7 @@ const transactionRoutes=require("./routes/transactionRoutes");
 const app = express();
 
 //middlewares
-//abilita richieste CORS
+//abilita le richieste CORS
 app.use(cors({
   origin: process.env.CLIENT_URL || "http://localhost:5173",
   credentials: true
