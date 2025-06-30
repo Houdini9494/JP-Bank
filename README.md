@@ -96,6 +96,7 @@ Installa le dipendenze:
 - cd frontend
 - npm install
 - npm run dev
+  
 Il frontend sarà visibile all'indirizzo: http://localhost:5173
 
 ### 4. Configura il database
@@ -135,7 +136,7 @@ DB_NAME="nome_database"
 ---
 
 ## Autore
-Giacomo Piatto
-Università: Pegaso
-Corso di laurea: L31 Informatica per le aziende digitali
+Giacomo Piatto.
+Università: Pegaso.
+Corso di laurea: L31 - Scienze e tecnologie informatiche
 Anno accademico: 2024/2025
