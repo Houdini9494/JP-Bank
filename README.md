@@ -86,6 +86,7 @@ Swagger è disponibile all'indirizzo: http://localhost:3000/api-docs
 
 ### 2. Configura il backend
 Modifica il file .env con i parametri del tuo DB MySQL (vedi .env.example)
+
 Installa le dipendenze:
 - cd backend
 - npm install
