@@ -1,0 +1,6 @@
+node_modules/   # ignora tutte le cartelle "node_modules" delle dipendenze installate da npm
+.env            # ignora tuti i file .env con le variabili ambiente
+*.log           # ignora tutti i file con estensione .log
+logs/           # ignora ogni eventuale cartella usata per i file di log
+dist/           # ignora i file di build del frontend generati da Vite
+.DS_Store       # ignora i file nascosti generati da macOS
