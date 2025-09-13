@@ -31,7 +31,7 @@ class AccountController{
         "SELECT COUNT(*) as count FROM accounts WHERE user_id = ? AND status = 'active'", [req.userId]
       );
 
-      //controlla se è stato raggiunto il numero massimo di conti creabili (3)
+      //controlla se è stato raggiunto MAX_ACCOUNTS
       if(existingAccounts[0].count >= MAX_ACCOUNTS){
         throw new AppError('Limite massimo di conti raggiunto', 409);
       }
@@ -83,7 +83,7 @@ class AccountController{
         throw new AppError('Il conto deve avere saldo zero per essere chiuso; devi prima spostare i fondi.', 400);
       }
 
-      // Imposta lo stato a "non attivo"
+      // Imposta lo stato a "inactive"
       await db.execute(
         "UPDATE accounts SET status = ? WHERE id = ?",
         ['inactive', accountId]

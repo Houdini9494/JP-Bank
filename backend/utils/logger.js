@@ -1,4 +1,4 @@
-// utils/logger.js
+//Importa le funzioni principali di winston e il trasporto per la rotazione giornaliera dei file di log
 const { createLogger, format, transports } = require('winston');
 const DailyRotateFile = require('winston-daily-rotate-file');
 
@@ -11,6 +11,7 @@ const logger = createLogger({
     format.json()
   ),
   transports: [
+    // File di log per errori, ruotato giornalmente e compresso dopo 14gg
     new DailyRotateFile({
       filename: 'logs/%DATE%-error.log',
       datePattern: 'YYYY-MM-DD',
@@ -19,6 +20,7 @@ const logger = createLogger({
       maxSize: '20m',        // dimensione massima 20MB
       maxFiles: '14d'        // conserva per 14 giorni
     }),
+    // File di log per tutti i 'level', ruotato giornalmente e compresso dopo 14gg
     new DailyRotateFile({
       filename: 'logs/%DATE%-combined.log',
       datePattern: 'YYYY-MM-DD',
@@ -29,7 +31,7 @@ const logger = createLogger({
   ]
 });
 
-// In sviluppo mostra anche su console
+// In ambiente di sviluppo aggiunge anche la console come destinazione dei log
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new transports.Console({
     format: format.combine(

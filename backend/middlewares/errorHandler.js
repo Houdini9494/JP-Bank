@@ -1,6 +1,7 @@
-// middlewares/errorHandler.js
+// Importa il logger personalizzato
 const logger = require('../utils/logger');
 
+// Middleware di gestione centralizzata degli errori Express
 module.exports = (err, req, res, next) => {
   // Log automatico: errori operativi noti = warn, bug imprevisti = error
   const status = err.statusCode || 500;

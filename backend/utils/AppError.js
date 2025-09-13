@@ -1,4 +1,4 @@
-// utils/AppError.js
+//definsce una classe di errore personalizzata per gestire gli errori
 class AppError extends Error {
   constructor(message, statusCode) {
     super(message);
