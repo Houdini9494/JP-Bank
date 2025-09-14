@@ -41,6 +41,7 @@ Include autenticazione JWT, creazione e gestione di conti fittizi, invio fondi, 
 ---
 
 ## Struttura del progetto
+```
 jp-bank/
 ├── backend/
 │ ├── controllers/
@@ -64,7 +65,7 @@ jp-bank/
 |
 └── database/
   └── struttura.sql
-
+```
 ---
 
 ## Autenticazione
