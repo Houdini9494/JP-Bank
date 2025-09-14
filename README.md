@@ -148,6 +148,6 @@ Giacomo Piatto
 
 Università: Pegaso
 
-Corso di laurea: L31 Informatica per le aziende digitali
+Corso di laurea: L31-Scienze e Tecnologie Informatiche
 
 Anno accademico: 2024/2025
