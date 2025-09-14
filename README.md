@@ -1,5 +1,6 @@
 # JP-Banking – Simulatore di Home Banking
-Progetto sviluppato come simulazione di un'applicazione bancaria full-stack API based, con frontend in Vue.js + Vite, backend in Node.js + Express e database MySQL.  
+Progetto sviluppato come simulazione di un'applicazione bancaria full-stack API based, con frontend in Vue.js + Vite, backend in Node.js + Express e database MySQL.
+
 Include autenticazione JWT, creazione e gestione di conti fittizi, invio fondi, cronologia transazioni e documentazione Swagger.
 
 ---
@@ -88,6 +89,7 @@ Swagger è disponibile all'indirizzo: http://localhost:3000/api-docs
 
 ### 2. Configura il backend
 Modifica il file .env con i parametri del tuo DB MySQL (vedi .env.example)
+
 Installa le dipendenze:
 - cd backend
 - npm install
@@ -97,11 +99,14 @@ Installa le dipendenze:
 - cd frontend
 - npm install
 - npm run dev
+  
 Il frontend sarà visibile all'indirizzo: http://localhost:5173
 
 ### 4. Configura il database
 Il progetto prevede l'utilizzo di un utente MySQL dedicato (es. bank_user) con accesso esclusivo al database jp_bank.
+
 Si consiglia di non utilizzare l'utente root per motivi di sicurezza.
+
 Di seguito la procedura per una corretta configurazione iniziale.
 
 Accedere a mysql come utente root:
@@ -121,8 +126,11 @@ Uscire da mysql, spostarsi sulla cartella "database" del progetto ed importare i
 - mysql -u nome_utente -p nome_database < struttura.sql
 
 a questo punto modificare il file ".env" contenuto nella cartella "backend" del progetto, assegnando i corretti valori alle variabili:
+
 DB_USER="nome_utente"
+
 DB_PASS="password_sicura"
+
 DB_NAME="nome_database"
 
 ---
@@ -137,6 +145,9 @@ DB_NAME="nome_database"
 
 ## Autore
 Giacomo Piatto
+
 Università: Pegaso
+
 Corso di laurea: L31 Informatica per le aziende digitali
+
 Anno accademico: 2024/2025
